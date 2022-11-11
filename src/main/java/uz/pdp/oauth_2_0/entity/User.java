@@ -10,15 +10,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class User {
 
-    // Entity for Google and GitHub accounts
+    // Entity fields for Google and GitHub accounts
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String email;   // @gmail account
     private String given_name;
     private String picture; // img url
+
     private String type;    // user, admin
-    private String email;   // @gmail account
     private String login;   // login name
     private String bio;     // bio
     private String avatar_url; //gitHub profile picture url
